@@ -1,0 +1,27 @@
+{
+  "name": "Timeout for page",
+  "description": "description",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "http://*/*",
+    "https://*/*",
+    "clipboardWrite",
+    "webNavigation"
+  ],
+  "content_scripts": [{
+    "matches": [ "*://*/*" ],
+    "js": [ "index.js" ],
+    "css": [ "style.css" ]
+  }],
+  "background": {
+    "scripts": ["index.js"],
+    "persistant": true
+  },
+  "browser_action": {
+    "default_title": "Set timer",
+    "default_popup": "index.html"
+  },
+  "manifest_version": 2
+}
