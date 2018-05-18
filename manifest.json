@@ -5,14 +5,13 @@
   "permissions": [
     "activeTab",
     "tabs",
+    "storage",
     "http://*/*",
-    "https://*/*",
-    "clipboardWrite",
-    "webNavigation"
+    "https://*/*"
   ],
   "content_scripts": [{
     "matches": [ "*://*/*" ],
-    "js": [ "index.js" ],
+    "js": [ "index.js", "background.js"],
     "css": [ "style.css" ]
   }],
   "background": {
