@@ -35,11 +35,10 @@ calculateOpacity = function(){
     opacityVariable = 0.25
     changeOpacity()
   }
-    else if(timerLength < parseInt((timerStart / 2))){
+  else if(timerLength < parseInt((timerStart / 2))){
     opacityVariable = 0.5
     changeOpacity()
   }
-
   else if(timerLength < (timerStart - parseInt((timerStart / 4)))){
     opacityVariable = 0.75
     changeOpacity()
@@ -48,9 +47,6 @@ calculateOpacity = function(){
     opacityVariable = 0
     changeOpacity()
   }
-
-  
-
 }
 //vahetab lehe läbipaistvust
 changeOpacity = function(){
@@ -60,7 +56,6 @@ changeOpacity = function(){
             {code: 'document.body.style.opacity = "' + opacityVariable + '";'});
       })
   }
-
 }
 //Kui sisestad komaga arvu ss viskab alerdi
 displayAlert = function(){
@@ -80,5 +75,6 @@ muteEverySound = function(){
       })
   }
 }
+
 document.addEventListener("DOMContentLoaded", function() {
     startTimer();})
