@@ -5,21 +5,11 @@
   "permissions": [
     "activeTab",
     "tabs",
+    "storage",
     "http://*/*",
-    "https://*/*",
-    "clipboardWrite",
-    "webNavigation"
+    "https://*/*"
   ],
-  "content_scripts": [{
-    "matches": [ "*://*/*" ],
-    "js": [ "index.js" ],
-    "css": [ "style.css" ]
-  }],
-  "background": {
-    "scripts": ["index.js"],
-    "persistant": true
-  },
-  "browser_action": {
+  "page_action": {
     "default_title": "Set timer",
     "default_popup": "index.html"
   },
